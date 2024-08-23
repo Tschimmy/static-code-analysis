@@ -67,6 +67,7 @@ export function getDateRelativeFromOtherDate({ value, unit }: Interval,
       newDate.setHours(newDate.getHours() + value)
     case IntervalUnit.Days:
       newDate.setDate(newDate.getDate() + value)
+        break
     case IntervalUnit.Weeks:
       newDate.setDate(newDate.getDate() + value * 7)
     case IntervalUnit.Months:
