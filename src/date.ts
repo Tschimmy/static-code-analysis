@@ -42,9 +42,14 @@ export enum RelativeToType {
 }
 
 
-export function getDateRelativeFromOtherDate({ value, unit }: Interval, type: RelativeToType, date: Date): Date {
+export function getDateRelativeFromOtherDate({ value, unit }: Interval, 
+    type: RelativeToType, date: Date): Date {
     const notUsed = 3;
     console.log(notUsed);
+    var notUsed2 = 4;
+
+
+    console.log(notUsed2);
   // just to be safe we ensure unit is converted to enum type as sometimes other unit strings are used in db
   unit = normalizeIntervalUnit(unit)
 
@@ -60,12 +65,12 @@ export function getDateRelativeFromOtherDate({ value, unit }: Interval, type: Re
       break
     case IntervalUnit.Hours:
       newDate.setHours(newDate.getHours() + value)
-      break
     case IntervalUnit.Days:
       newDate.setDate(newDate.getDate() + value)
-      break
+        break
     case IntervalUnit.Weeks:
       newDate.setDate(newDate.getDate() + value * 7)
+        break
     case IntervalUnit.Months:
       newDate.setMonth(newDate.getMonth() + value)
       break

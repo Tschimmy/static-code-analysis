@@ -6,4 +6,9 @@ describe("getDateRelativeFromOtherDate functions", () => {
         console.log(date);
     expect(date.getDate()).toEqual(13);
   });
+  it("should get 1 month before today", () => {
+    const date = getDateRelativeFromOtherDate({ value: 10, unit: IntervalUnit.Months }, RelativeToType.After, new Date())
+        console.log(date);
+    expect(date.getMonth()).toEqual(5);
+  });
 });
